@@ -1,0 +1,43 @@
+# This are the default config options for the Julia Language Server
+We likely don't need all of this, because the configurations get merged togetehr.
+There are likely some good defaults flying around that contribute to the configuration.
+
+
+#TODO: Configure this entire thing somewhere, and then go through the fields and see what can be removed because
+it comes from defaults.
+
+- julials:
+  - before_init: <function @/home/snagel/.local/share/nvim/lazy/mason-lspconfig.nvim/lua/mason-lspconfig/lsp/julials.lua:3>
+  - capabilities: {
+      textDocument = {
+        completion = {
+          completionItem = {
+            commitCharactersSupport = false,
+            deprecatedSupport = true,
+            documentationFormat = { "markdown", "plaintext" },
+            insertReplaceSupport = true,
+            insertTextModeSupport = {
+              valueSet = { 1 }
+            },
+            labelDetailsSupport = true,
+            preselectSupport = false,
+            resolveSupport = {
+              properties = { "documentation", "detail", "additionalTextEdits", "command", "data" }
+            },
+            snippetSupport = true,
+            tagSupport = {
+              valueSet = { 1 }
+            }
+          },
+          completionList = {
+            itemDefaults = { "commitCharacters", "editRange", "insertTextFormat", "insertTextMode", "data" }
+          },
+          contextSupport = true,
+          insertTextMode = 1
+        }
+      }
+    }
+  - cmd: { "julia-lsp" }
+  - filetypes: julia
+  - on_attach: <function @/home/snagel/.local/share/nvim/lazy/nvim-lspconfig/lsp/julials.lua:123>
+  - root_markers: Project.toml, JuliaProject.toml

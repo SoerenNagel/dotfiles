@@ -1,0 +1,12 @@
+[credential "https://git.overleaf.com"]
+	username = soeren.nagel@gmail.com
+	helper = store
+[user]
+	name = SoerenNagel
+	email = nagel@zib.de
+[init]
+	defaultBranch = main
+[core]
+	editor = nvim
+[merge]
+	ff = false
