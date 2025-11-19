@@ -79,6 +79,9 @@ require('lazy').setup({
   require 'plugins.oil',
   -- tunnell for code execution
   require 'plugins.tunnell',
+
+  -- Debugger
+  require 'dap.nvim-dap',
 }, {
   ui = require 'core.ui',
 })
