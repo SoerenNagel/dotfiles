@@ -31,10 +31,45 @@ local catpuccin = { -- You can easily change to a different colorscheme.
     -- Load the colorscheme here.
     -- Like many other themes, this one has different styles, and you could load
     -- any other, such as 'tokyonight-storm', 'tokyonight-moon', or 'tokyonight-day'.
-    vim.cmd.colorscheme 'catppuccin-mocha' -- "tokyonight-night"
+    vim.cmd.colorscheme 'catppuccin-frappe' -- "tokyonight-night"
 
     -- You can configure highlights by doing something like:
     vim.cmd.hi 'Comment gui=none'
+  end,
+}
+local kangawa = {
+  'rebelot/kanagawa.nvim',
+  lazy = false, -- Load this during startup
+  priority = 1000, -- Load this before other plugins
+  config = function()
+    -- Default options:
+    require('kanagawa').setup {
+      compile = false, -- enable compiling the colorscheme
+      undercurl = true, -- enable undercurls
+      commentStyle = { italic = true },
+      functionStyle = {},
+      keywordStyle = { italic = true },
+      statementStyle = { bold = true },
+      typeStyle = {},
+      transparent = false, -- do not set background color
+      dimInactive = false, -- dim inactive windows
+      terminalColors = true, -- define vim.g.terminal_color_{0,17}
+      colors = { -- add/modify theme and palette colors
+        palette = {},
+        theme = { wave = {}, lotus = {}, dragon = {}, all = {} },
+      },
+      overrides = function(colors) -- add/modify highlights
+        return {}
+      end,
+      theme = 'wave', -- Load "wave" theme by default when 'background' is not set
+      background = { -- map the value of 'background' option to a theme
+        dark = 'dragon', -- try "dragon" !
+        light = 'lotus',
+      },
+    }
+
+    -- setup must be called before loading
+    vim.cmd 'colorscheme kanagawa'
   end,
 }
 return tokyo
