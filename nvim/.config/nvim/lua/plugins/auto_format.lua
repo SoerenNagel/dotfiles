@@ -29,12 +29,23 @@ return { -- Autoformat
       end
     end,
     formatters_by_ft = {
-      lua = { 'stylua', 'julia_formatter' },
+      lua = { 'stylua' },
+      tex = { 'latexindent' },
+      plaintex = { 'latexindent' },
+
       -- Conform can also run multiple formatters sequentially
       -- python = { "isort", "black" },
       --
       -- You can use 'stop_after_first' to run the first available formatter from the list
       -- javascript = { "prettierd", "prettier", stop_after_first = true },
+    },
+    -- Custom arguments for formatters
+    formatters = {
+      latexindent = {
+        -- "-g /dev/null" prevents 'indent.log' files from appearing in your project
+        -- Use "-g", "NUL" if you are on Windows
+        prepend_args = { '-g', '/dev/null' },
+      },
     },
   },
 }
