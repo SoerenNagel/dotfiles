@@ -10,3 +10,7 @@
 	editor = nvim
 [merge]
 	ff = false
+[pull]
+	rebase = true
+[credential]
+	helper = store
