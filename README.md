@@ -4,8 +4,7 @@ This repository contains my personal dotfiles for **Zsh**, **Oh My Zsh**, and as
 
 ## Features
 
-- **Zsh with Oh My Zsh**  
-  - Powerlevel10k theme.
+- **Zsh with Oh My Starship**  
   - Syntax highlighting via `zsh-syntax-highlighting`.
   - Vi-mode keybindings.
   - Menu selection for tab completion with Vim keys.
@@ -31,17 +30,17 @@ To get this setup fully working, the following packages and tools should be inst
 
 ### Shell & Prompt
 - `zsh` – Z shell
-- `oh-my-zsh` – framework for managing Zsh configuration
-- `powerlevel10k` – Zsh theme with instant prompt
+- `starship` – Zsh theme with instant prompt
 - `zsh-syntax-highlighting` – syntax highlighting for commands
 
 ### Text Editor
 - `nvim`
 - `zathura`
+- `latexindent`
 
 ### File Utilities
 - `eza` – replacement for `ls`, `ll`, `tree`
-- `RSLURM` 
+- `RSLURM` - for Remote SLURM Management
 
 ### Terminal Multiplexing / Session Management
 - `tmux` – terminal multiplexer
@@ -59,8 +58,6 @@ To get this setup fully working, the following packages and tools should be inst
 
 ---
 
-## BackUp existing Configuration
-
 ## SetUp
 
 ```bash
@@ -68,7 +65,3 @@ git clone https://github.com/yourusername/dotfiles.git ~/.dotfiles
 cd ~/.dotfiles
 stow */
 ```
-
-
-
-
